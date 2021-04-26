@@ -1,0 +1,131 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    Typography
+    <h1 class="font-mono text-6xl">Hello World</h1>
+
+    Colour
+    <ul class="space-y-2">
+        <li>
+            <ul class="grid grid-cols-10 h-7">
+                <li class="bg-red-50"></li>
+                <li class="bg-red-100"></li>
+                <li class="bg-red-200"></li>
+                <li class="bg-red-300"></li>
+                <li class="bg-red-400"></li>
+                <li class="bg-red-500"></li>
+                <li class="bg-red-600"></li>
+                <li class="bg-red-700"></li>
+                <li class="bg-red-800"></li>
+                <li class="bg-red-900"></li>
+            </ul>
+        </li>
+
+        <li>
+            <ul class="grid grid-cols-10 h-7">
+                <li class="bg-green-50"></li>
+                <li class="bg-green-100"></li>
+                <li class="bg-green-200"></li>
+                <li class="bg-green-300"></li>
+                <li class="bg-green-400"></li>
+                <li class="bg-green-500"></li>
+                <li class="bg-green-600"></li>
+                <li class="bg-green-700"></li>
+                <li class="bg-green-800"></li>
+                <li class="bg-green-900"></li>
+            </ul>
+        </li>
+
+        <li>
+            <ul class="grid grid-cols-10 h-7">
+                <li class="bg-yellow-50"></li>
+                <li class="bg-yellow-100"></li>
+                <li class="bg-yellow-200"></li>
+                <li class="bg-yellow-300"></li>
+                <li class="bg-yellow-400"></li>
+                <li class="bg-yellow-500"></li>
+                <li class="bg-yellow-600"></li>
+                <li class="bg-yellow-700"></li>
+                <li class="bg-yellow-800"></li>
+                <li class="bg-yellow-900"></li>
+            </ul>
+        </li>
+    </ul>
+
+    {#    Chat Notification banner#}
+    <div class="p-6 mx-auto"></div>
+    <div class="p-6 max-w-sm mx-auto bg-white rounded-xl shadow-md flex items-center space-x-4">
+        <div class="flex-shrink-0">
+            <img class="h-12 w-12" src="{% static  'img/hpx-io.jpg' %}" alt="ChitChat Logo">
+        </div>
+        <div>
+            <div class="text-xl font-medium text-black">ChitChat</div>
+            <p class="text-gray-500">You have a new message!</p>
+        </div>
+    </div>
+
+    {#    Message reply card #}
+    <div class="p-6 mx-auto"></div>
+    <div class="py-8 px-8 max-w-sm mx-auto bg-white rounded-xl shadow-md space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6">
+        <img class="block mx-auto h-24 rounded-full sm:mx-0 sm:flex-shrink-0" src="{% static 'img/hpx-io.jpg' %}"
+             alt="Woman's Face">
+        <div class="text-center space-y-2 sm:text-left">
+            <div class="space-y-0.5">
+                <p class="text-lg text-black font-semibold">
+                    Leonidas Omar Natus
+                </p>
+                <p class="text-gray-500 font-medium">
+                    Lead Developer
+                </p>
+            </div>
+            <button class="px-4 py-1 text-sm text-blue-600 font-semibold rounded-full border border-blue-200 hover:text-white hover:bg-blue-600 hover:border-transparent focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">
+                Message
+            </button>
+        </div>
+    </div>
+    <div class="p-6 mx-auto"></div>
+
+    <!-- Using utilities -->
+    <!-- <button class="py-2 px-4 font-semibold rounded-lg shadow-md text-white bg-green-500 hover:bg-green-700">
+        Click me
+    </button> -->
+
+    <!-- <button class="btn btn-green">Send Message</button>
+    <style>
+        .btn{
+            @apply py-2 px-4 font-semibold rounded-lg shadow-md;
+        }
+        .btn-green{
+            @apply text-white bg-green-500 hover:bg-green-700;
+        }
+    </style> -->
+
+    <div class="mx-w-md mx-auto bg-white rounded-lg shadow-md overflow-hidden md:max-w-2xl">
+        <div class="md:flex">
+            <div class="md:flex-shrink-0">
+                <img class="h-48 w-full object-cover md:w-48" src="{% static 'img/hpx-io.jpg' %}"
+                     alt="Man looking at item at a store">
+            </div>
+            <div class="p-8">
+                <div class="uppercase tracking-wide text-sm text-blue-500 font-semibold">Case study</div>
+                <a href="#" class="block mt-1 text-lg leading-tight font-medium text-black hover:underline">Finding
+                    customers for your new business</a>
+                <p class="mt-2 text-gray-500">Getting a new business off the ground is a lot of hard work. Here are five
+                    ideas you can use to find your first customers.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="uppercase">
+        <button type="button"
+                class="px-4 py-1 text-sm text-blue-600 font-semibold rounded-full border border-blue-200
+                hover:text-white hover:bg-blue-600 hover:border-transparent
+                focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2"
+        onclick="document.getElementById('timer').innerHTML = Date()">
+            Check Time
+        </button>
+        <p id="timer"></p>
+    </div>
+{% endblock %}
